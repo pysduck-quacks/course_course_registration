@@ -8,6 +8,8 @@
     <meta name="description" content="BMU Learning Management System" />
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
 
   <body>
@@ -23,12 +25,12 @@
         
         <nav class="sidebar-nav">
           <ul>
-            <li><a href="index.html" class="sidebar-link active"><span class="icon">🏠</span> Home</a></li>
-            <li><a href="#" class="sidebar-link"><span class="icon">🕒</span> Timetable</a></li>
-            <li><a href="#" class="sidebar-link"><span class="icon">💬</span> Messages</a></li>
-            <li><a href="#" class="sidebar-link"><span class="icon">📄</span> Result</a></li>
-            <li><a href="courses.html" class="sidebar-link"><span class="icon">📚</span> Courses</a></li>
-            <li><a href="#" class="sidebar-link"><span class="icon">📋</span> Attendance</a></li>
+            <li><a href="index.html" class="sidebar-link active"><i data-lucide="home" class="icon"></i> Home</a></li>
+            <li><a href="#" class="sidebar-link"><i data-lucide="clock" class="icon"></i> Timetable</a></li>
+            <li><a href="#" class="sidebar-link"><i data-lucide="message-square" class="icon"></i> Messages</a></li>
+            <li><a href="#" class="sidebar-link"><i data-lucide="file-text" class="icon"></i> Result</a></li>
+            <li><a href="courses.html" class="sidebar-link"><i data-lucide="book-open" class="icon"></i> Courses</a></li>
+            <li><a href="#" class="sidebar-link"><i data-lucide="list" class="icon"></i> Attendance</a></li>
           </ul>
         </nav>
       </div>
@@ -39,8 +41,8 @@
         <header class="header">
           <h1 class="page-title">Course Registration</h1>
           <div class="header-actions">
-            <button class="icon-button"><span class="icon">🔔</span></button>
-            <button class="icon-button"><span class="icon">👤</span></button>
+            <button class="icon-button"><i data-lucide="bell" class="icon"></i></button>
+            <button class="icon-button"><i data-lucide="user" class="icon"></i></button>
           </div>
         </header>
 
@@ -48,15 +50,15 @@
         <main>
           <div class="glass-card">
             <div class="semester-tabs">
-              <button class="tab-button active">Semester 1</button>
-              <button class="tab-button">Semester 2</button>
-              <button class="tab-button">Semester 3</button>
-              <button class="tab-button">Semester 4</button>
+              <button class="tab-button active" data-semester="1">Semester 1</button>
+              <button class="tab-button" data-semester="2">Semester 2</button>
+              <button class="tab-button" data-semester="3">Semester 3</button>
+              <button class="tab-button" data-semester="4">Semester 4</button>
             </div>
             
             <div class="card-content">
               <div class="table-container">
-                <table class="data-table">
+                <table class="data-table" id="semester-1-table">
                   <thead>
                     <tr>
                       <th class="status-col"></th>
@@ -114,10 +116,135 @@
                     </tr>
                   </tbody>
                 </table>
+
+                <table class="data-table hidden" id="semester-2-table">
+                  <thead>
+                    <tr>
+                      <th class="status-col"></th>
+                      <th>Unit</th>
+                      <th>Subject</th>
+                      <th>Issues Date</th>
+                      <th>Deadline</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="status-indicator">
+                        <div class="status-dot green"></div>
+                      </td>
+                      <td>G3</td>
+                      <td>Data Structures</td>
+                      <td>05/10/2023</td>
+                      <td>05/30/2023</td>
+                      <td><span class="status-badge submitted">✓ Submitted</span></td>
+                    </tr>
+                    <tr>
+                      <td class="status-indicator"></td>
+                      <td>G2</td>
+                      <td>Database Systems</td>
+                      <td>06/05/2023</td>
+                      <td>06/25/2023</td>
+                      <td><span class="status-badge pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                      <td class="status-indicator"></td>
+                      <td>G4</td>
+                      <td>Web Development</td>
+                      <td>06/15/2023</td>
+                      <td>07/05/2023</td>
+                      <td><span class="status-badge pending">Pending</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table class="data-table hidden" id="semester-3-table">
+                  <thead>
+                    <tr>
+                      <th class="status-col"></th>
+                      <th>Unit</th>
+                      <th>Subject</th>
+                      <th>Issues Date</th>
+                      <th>Deadline</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="status-indicator">
+                        <div class="status-dot red"></div>
+                      </td>
+                      <td>G1</td>
+                      <td>Operating Systems</td>
+                      <td>09/10/2023</td>
+                      <td>09/30/2023</td>
+                      <td><span class="status-badge late">✕ Late Submission</span></td>
+                    </tr>
+                    <tr>
+                      <td class="status-indicator"></td>
+                      <td>G3</td>
+                      <td>Computer Networks</td>
+                      <td>10/05/2023</td>
+                      <td>10/25/2023</td>
+                      <td><span class="status-badge pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                      <td class="status-indicator">
+                        <div class="status-dot green"></div>
+                      </td>
+                      <td>G2</td>
+                      <td>AI Fundamentals</td>
+                      <td>10/15/2023</td>
+                      <td>11/05/2023</td>
+                      <td><span class="status-badge submitted">✓ Submitted</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table class="data-table hidden" id="semester-4-table">
+                  <thead>
+                    <tr>
+                      <th class="status-col"></th>
+                      <th>Unit</th>
+                      <th>Subject</th>
+                      <th>Issues Date</th>
+                      <th>Deadline</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="status-indicator"></td>
+                      <td>G4</td>
+                      <td>Cloud Computing</td>
+                      <td>01/10/2024</td>
+                      <td>01/30/2024</td>
+                      <td><span class="status-badge pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                      <td class="status-indicator"></td>
+                      <td>G1</td>
+                      <td>Cybersecurity</td>
+                      <td>02/05/2024</td>
+                      <td>02/25/2024</td>
+                      <td><span class="status-badge pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                      <td class="status-indicator">
+                        <div class="status-dot green"></div>
+                      </td>
+                      <td>G3</td>
+                      <td>Big Data Analytics</td>
+                      <td>02/15/2024</td>
+                      <td>03/05/2024</td>
+                      <td><span class="status-badge submitted">✓ Submitted</span></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
               
               <div class="action-buttons">
-                <a href="courses.html" class="button primary">Next <span class="icon">→</span></a>
+                <a href="courses.html" class="button primary">Next <i data-lucide="arrow-right" class="icon"></i></a>
               </div>
             </div>
           </div>
@@ -126,5 +253,31 @@
     </div>
 
     <script src="./script.js"></script>
+    <script>
+      // Initialize Lucide icons
+      lucide.createIcons();
+      
+      // Handle semester tab switching
+      document.querySelectorAll('.tab-button').forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          document.querySelectorAll('.tab-button').forEach(btn => {
+            btn.classList.remove('active');
+          });
+          
+          // Add active class to clicked button
+          button.classList.add('active');
+          
+          // Hide all tables
+          document.querySelectorAll('.data-table').forEach(table => {
+            table.classList.add('hidden');
+          });
+          
+          // Show selected semester table
+          const semesterNum = button.getAttribute('data-semester');
+          document.getElementById(`semester-${semesterNum}-table`).classList.remove('hidden');
+        });
+      });
+    </script>
   </body>
 </html>

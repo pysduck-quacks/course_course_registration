@@ -8,6 +8,8 @@
     <meta name="description" content="BMU Learning Management System" />
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
       .error-container {
         min-height: 100vh;
@@ -46,12 +48,14 @@
         <h1 class="error-code">404</h1>
         <p class="error-message">This page is under development</p>
         <a href="index.html" class="button primary">
-          <span class="icon">←</span> Return to Home
+          <i data-lucide="arrow-left" class="icon"></i> Return to Home
         </a>
       </div>
     </div>
 
     <script>
+      // Initialize Lucide icons
+      lucide.createIcons();
       console.error("404 Error: User attempted to access non-existent route: " + window.location.pathname);
     </script>
   </body>
