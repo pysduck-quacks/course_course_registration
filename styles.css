@@ -306,6 +306,11 @@ main {
   text-align: right;
 }
 
+/* Font weight classes */
+.font-medium {
+  font-weight: 500;
+}
+
 /* Checkbox Styles */
 .checkbox-cell {
   text-align: center;
