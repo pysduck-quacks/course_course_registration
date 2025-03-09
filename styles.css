@@ -1,4 +1,3 @@
-
 /* Base Styles */
 :root {
   --purple-light: #9F7AEA;
@@ -324,6 +323,12 @@ main {
 .status-badge.late {
   background-color: rgba(229, 62, 62, 0.1);
   color: var(--red);
+}
+
+.icon-small {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
 }
 
 /* Button Styles */
