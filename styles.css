@@ -131,7 +131,7 @@ body {
 .page-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--purple-light);
+  color: var(--purple-dark);
   font-family: 'Inter', sans-serif;
   background-color: white;
   padding: 0.5rem 1.5rem;
@@ -214,7 +214,7 @@ main {
   cursor: pointer;
   transition: all 0.2s;
   font-family: 'Inter', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .tab-button:hover {
@@ -222,9 +222,8 @@ main {
 }
 
 .tab-button.active {
-  color: var(--purple-dark);
+  color: white;
   font-weight: 700;
-  background-color: white;
 }
 
 /* Card Content */
@@ -238,11 +237,13 @@ main {
 /* Table Styles */
 .table-container {
   overflow-x: auto;
+  margin-bottom: 1.5rem;
 }
 
 .data-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .data-table.hidden {
@@ -259,7 +260,7 @@ main {
 }
 
 .data-table td {
-  padding: 1rem 0.5rem 1rem 0;
+  padding: 1rem 0.5rem;
   font-size: 0.875rem;
   border-bottom: 1px solid #f5f5f5;
 }
@@ -275,6 +276,11 @@ main {
 .status-col {
   width: 28px;
   padding-left: 0.5rem;
+}
+
+/* Align center for specific columns */
+.text-center {
+  text-align: center;
 }
 
 /* Checkbox Styles */
@@ -343,8 +349,39 @@ main {
   display: none;
 }
 
-/* Text alignment for tables */
-.text-center {
+/* Spacing for table columns */
+.data-table .col-code {
+  width: 12%;
+}
+
+.data-table .col-name {
+  width: 30%;
+}
+
+.data-table .col-sessions {
+  width: 12%;
+  text-align: center;
+}
+
+.data-table .col-credits {
+  width: 12%;
+  text-align: center;
+}
+
+.data-table .col-faculty {
+  width: 30%;
+}
+
+.data-table .col-unit {
+  width: 15%;
+}
+
+.data-table .col-subject {
+  width: 40%;
+}
+
+.data-table .col-select {
+  width: 10%;
   text-align: center;
 }
 
