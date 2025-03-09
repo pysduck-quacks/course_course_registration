@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BMU LMS - Course Registration</title>
+    <title>BMU LMS - Courses</title>
     <meta name="description" content="BMU Learning Management System" />
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -23,11 +23,11 @@
         
         <nav class="sidebar-nav">
           <ul>
-            <li><a href="index.html" class="sidebar-link active"><span class="icon">🏠</span> Home</a></li>
+            <li><a href="index.html" class="sidebar-link"><span class="icon">🏠</span> Home</a></li>
             <li><a href="#" class="sidebar-link"><span class="icon">🕒</span> Timetable</a></li>
             <li><a href="#" class="sidebar-link"><span class="icon">💬</span> Messages</a></li>
             <li><a href="#" class="sidebar-link"><span class="icon">📄</span> Result</a></li>
-            <li><a href="courses.html" class="sidebar-link"><span class="icon">📚</span> Courses</a></li>
+            <li><a href="courses.html" class="sidebar-link active"><span class="icon">📚</span> Courses</a></li>
             <li><a href="#" class="sidebar-link"><span class="icon">📋</span> Attendance</a></li>
           </ul>
         </nav>
@@ -37,7 +37,7 @@
       <div class="main-content">
         <!-- Header -->
         <header class="header">
-          <h1 class="page-title">Course Registration</h1>
+          <h1 class="page-title">Courses</h1>
           <div class="header-actions">
             <button class="icon-button"><span class="icon">🔔</span></button>
             <button class="icon-button"><span class="icon">👤</span></button>
@@ -59,65 +59,55 @@
                 <table class="data-table">
                   <thead>
                     <tr>
-                      <th class="status-col"></th>
-                      <th>Unit</th>
-                      <th>Subject</th>
-                      <th>Issues Date</th>
-                      <th>Deadline</th>
-                      <th>Status</th>
+                      <th>Code</th>
+                      <th>Course Name</th>
+                      <th>Sessions</th>
+                      <th>Credits</th>
+                      <th>Faculty Name</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td class="status-indicator">
-                        <div class="status-dot green"></div>
-                      </td>
-                      <td>G2</td>
+                      <td>CSE101</td>
                       <td>COA</td>
-                      <td>03/02/2023</td>
-                      <td>03/05/2023</td>
-                      <td><span class="status-badge submitted">✓ Submitted</span></td>
+                      <td>30</td>
+                      <td>3.0</td>
+                      <td>Dr Satyendr Singh</td>
                     </tr>
                     <tr>
-                      <td class="status-indicator"></td>
-                      <td>G1</td>
+                      <td>CSE201</td>
                       <td>SE</td>
-                      <td>03/09/2023</td>
-                      <td>03/09/2025</td>
-                      <td><span class="status-badge pending">Pending</span></td>
+                      <td>150</td>
+                      <td>3.0</td>
+                      <td>Dr Nishtha Phutela</td>
                     </tr>
                     <tr>
-                      <td class="status-indicator"></td>
-                      <td>G1</td>
+                      <td>CSE205</td>
                       <td>MAD</td>
-                      <td>03/02/2024</td>
-                      <td>03/10/2026</td>
-                      <td><span class="status-badge pending">Pending</span></td>
+                      <td>45</td>
+                      <td>3.0</td>
+                      <td>Mr Gautam Gupta</td>
                     </tr>
                     <tr>
-                      <td class="status-indicator"></td>
-                      <td>G1</td>
+                      <td>PD1201</td>
                       <td>Design Thinking</td>
-                      <td>03/05/2025</td>
-                      <td>10/17/2025</td>
-                      <td><span class="status-badge pending">Pending</span></td>
+                      <td>60</td>
+                      <td>2.0</td>
+                      <td>Mr Avijit Chakravorty</td>
                     </tr>
                     <tr>
-                      <td class="status-indicator">
-                        <div class="status-dot red"></div>
-                      </td>
-                      <td>G2</td>
+                      <td>CSE301</td>
                       <td>Machine Learning</td>
-                      <td>03/08/2025</td>
-                      <td>03/10/2025</td>
-                      <td><span class="status-badge late">✕ Late Submission</span></td>
+                      <td>130</td>
+                      <td>3.0</td>
+                      <td>Prof Anustha Rao</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
               
               <div class="action-buttons">
-                <a href="courses.html" class="button primary">Next <span class="icon">→</span></a>
+                <button class="button primary">Next <span class="icon">→</span></button>
               </div>
             </div>
           </div>

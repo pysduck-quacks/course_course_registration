@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMU LMS - Page Not Found</title>
+    <meta name="description" content="BMU Learning Management System" />
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      .error-container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to bottom right, var(--purple-light), var(--purple));
+        padding: 1.5rem;
+      }
+      
+      .error-card {
+        max-width: 400px;
+        width: 100%;
+        padding: 2rem;
+        text-align: center;
+      }
+      
+      .error-code {
+        font-size: 6rem;
+        font-weight: bold;
+        color: var(--purple);
+        margin-bottom: 1rem;
+      }
+      
+      .error-message {
+        font-size: 1.25rem;
+        color: var(--gray-dark);
+        margin-bottom: 1.5rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="error-container">
+      <div class="glass-card error-card">
+        <h1 class="error-code">404</h1>
+        <p class="error-message">This page is under development</p>
+        <a href="index.html" class="button primary">
+          <span class="icon">←</span> Return to Home
+        </a>
+      </div>
+    </div>
+
+    <script>
+      console.error("404 Error: User attempted to access non-existent route: " + window.location.pathname);
+    </script>
+  </body>
+</html>
