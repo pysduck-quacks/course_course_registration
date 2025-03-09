@@ -259,10 +259,26 @@ main {
   font-weight: 500;
 }
 
+.data-table th.text-center {
+  text-align: center;
+}
+
+.data-table th.text-left {
+  text-align: left;
+}
+
 .data-table td {
   padding: 1rem 0.5rem;
   font-size: 0.875rem;
   border-bottom: 1px solid #f5f5f5;
+}
+
+.data-table td.text-center {
+  text-align: center;
+}
+
+.data-table td.text-left {
+  text-align: left;
 }
 
 .data-table tbody tr {
@@ -281,6 +297,11 @@ main {
 /* Align center for specific columns */
 .text-center {
   text-align: center;
+}
+
+/* Align left for specific columns */
+.text-left {
+  text-align: left;
 }
 
 /* Checkbox Styles */
